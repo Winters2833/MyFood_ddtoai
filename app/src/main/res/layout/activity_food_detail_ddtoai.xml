@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDetailActivity_ddtoai"
+    android:padding="16dp">
+
+    <!-- Tên món ăn -->
+
+    <!-- Ảnh món ăn -->
+
+    <TextView
+        android:id="@+id/txtFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Bánh mì bò kho"
+        android:textColor="#F44336"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgFood"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bun_bo"
+        app:layout_constraintTop_toBottomOf="@id/txtFoodName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Nút chọn size -->
+    <LinearLayout
+        android:id="@+id/sizeButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/imgFood"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:text="NHỎ\n10000.0" />
+
+        <Button
+            android:id="@+id/btnMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:text="VỪA\n29000.0" />
+
+        <Button
+            android:id="@+id/btnLarge"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#F44336"
+            android:text="LỚN\n51000.0" />
+    </LinearLayout>
+
+    <!-- Mô tả -->
+
+    <!-- Tên cửa hàng -->
+
+    <!-- Giá + số lượng + yêu thích + giỏ hàng -->
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Bữa ăn đơn giản cho người đơn giản!"
+        android:textColor="#555555"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDetail" />
+
+    <TextView
+        android:id="@+id/txtStoreName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Thông tin cửa hàng"
+        android:textColor="#444"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+    <LinearLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Nút trừ -->
+        <Button
+            android:id="@+id/btnMinus"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:text="-"
+            android:textSize="14sp" />
+
+        <!-- Số lượng -->
+        <TextView
+            android:id="@+id/txtQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="1"
+            android:textSize="18sp" />
+
+        <!-- Nút cộng -->
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:text="+"
+            android:textSize="14sp" />
+
+        <!-- Giá tiền -->
+
+        <!-- Nút yêu thích -->
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="10000 VND"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:background="@null"
+            android:contentDescription="Favorite"
+            android:src="@drawable/ic_heart2" />
+
+        <ImageButton
+            android:id="@+id/btnAddToCart"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:contentDescription="Add to cart"
+            android:src="@drawable/ic_cart" />
+
+        <!-- Nút giỏ hàng -->
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="51dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
+        android:contentDescription="Quay lại"
+        app:layout_constraintEnd_toStartOf="@+id/txtFoodName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back4" />
+
+    <TextView
+        android:id="@+id/txtName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Thông tin cửa hàng"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStoreName" />
+
+    <TextView
+        android:id="@+id/txtDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Mô tả"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeButtons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
